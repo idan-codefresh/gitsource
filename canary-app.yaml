@@ -11,12 +11,13 @@ spec:
     repoURL: https://github.com/idan-codefresh/canary-rollout.git
     targetRevision: HEAD
   destination:
-    name: idan-product-test
+    name: in-cluster
     namespace: default
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+      allowEmpty: false
     syncOptions:
       - PrunePropagationPolicy=foreground
       - Replace=false
@@ -24,3 +25,5 @@ spec:
       - Validate=true
       - CreateNamespace=false
       - ApplyOutOfSyncOnly=false
+      - ServerSideApply=true
+      - RespectIgnoreDifferences=false
