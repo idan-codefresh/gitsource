@@ -9,7 +9,7 @@ metadata:
 spec:
   project: default
   source:
-    path: example-manifests/trio-app/aperture-dev
+    path: example-manifests/trio-app/dev
     repoURL: https://github.com/idan-codefresh/promotion-example.git
     targetRevision: main
   destination:
