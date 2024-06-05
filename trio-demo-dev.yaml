@@ -4,6 +4,8 @@ metadata:
   name: trio-demo-dev
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
+  annotations:
+    codefresh.io/app-group: production
 spec:
   project: default
   source:
