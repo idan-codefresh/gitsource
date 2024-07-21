@@ -4,6 +4,8 @@ metadata:
   name: trio-demo-qa
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
+  annotations:
+    codefresh.io/product: trio-app
 spec:
   project: default
   source:
